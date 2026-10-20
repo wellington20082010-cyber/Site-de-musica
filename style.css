@@ -49,11 +49,6 @@ header h1 {
     margin-bottom: 10px;
 }
 
-header span {
-    color: var(--titulo);
-    font-size: inherit;
-}
-
 header p {
     color: var(--subtitulo);
     font-size: 14px;
@@ -83,10 +78,39 @@ input:focus {
     border-color: transparent;
 }
 
-form p {
-    text-align: right;
+.opcoesLogin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 20px;
     font-size: 14px;
+}
+
+.lembrarLogin {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0;
+    font-weight: normal;
+    cursor: pointer;
+    color: var(--links);
+}
+
+.lembrarLogin input {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    accent-color: var(--titulo);
+    cursor: pointer;
+    flex-shrink: 0;
+    outline: none;
+}
+
+.opcoesLogin a {
+    text-align: right;
 }
 
 a {
@@ -102,7 +126,7 @@ button {
     width: 100%;
     min-height: 46px;
     padding: 13px;
-    background: linear-gradient(90deg, #ff00cc, #7b2ff7);;
+    background: linear-gradient(90deg, #ff00cc, #7b2ff7);
     color: var(--branco);
     border: none;
     border-radius: 10px;
@@ -114,6 +138,7 @@ button {
 button:hover {
     opacity: 0.85;
 }
+
 .cadastro {
     text-align: center;
     margin-top: 25px;
@@ -147,7 +172,8 @@ button:hover {
         padding: 13px;
     }
 
-    form p, .cadastro {
+    .opcoesLogin,
+    .cadastro {
         font-size: 14px;
     }
 
@@ -158,16 +184,9 @@ button:hover {
 
 /* Ajustes para celulares muito pequenos */
 @media (max-width: 360px) {
-    body {
-        padding: 10px;
-    }
-
-    .container {
-        padding: 20px 16px;
-    }
-
-    header h1 {
-        font-size: 22px;
+    .opcoesLogin {
+        align-items: flex-start;
+        flex-direction: column;
     }
 }
 

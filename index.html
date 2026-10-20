@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="midias/logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <title>Paredão da Baixinha</title>
+    <title>Paredão da Baixinha | Login</title>
 </head>
 
 <body>
     <main class="container">
         <header class="titulo">
-            <h1>Bem-vindo ao <br><span>Paredão da Baixinha</span></h1>
+            <h1>Bem-vindo ao <br><img src="midias/logoNome.png" alt="Paredão da Baixinha"></h1>
             <p>Entre na sua conta</p>
         </header>
 
@@ -20,15 +21,23 @@
             <input type="email" name="email" id="email" placeholder="exemplo@gmail.com" autocomplete="email" required>
 
             <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" autocomplete="current-password" required>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha"
+                autocomplete="current-password" required>
 
-            <p><a href="#">Esqueceu sua senha?</a></p>
+            <div class="opcoesLogin">
+                <label class="lembrarLogin" for="lembrar">
+                    <input type="checkbox" name="lembrar" id="lembrar">
+                    <span>Lembrar login</span>
+                </label>
+
+                <p><a href="esqueceuSenha/index.html">Esqueceu sua senha?</a></p>
+            </div>
 
             <button type="submit">Entrar</button>
         </form>
 
         <section class="cadastro">
-            <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+            <p>Não tem uma conta? <a href="cadastro/index.html">Cadastre-se</a></p>
         </section>
     </main>
 </body>
