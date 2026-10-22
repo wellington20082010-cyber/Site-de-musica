@@ -4,28 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../midias/logo.png" type="image/png">
+    <meta name="theme-color" content="#080510">
     <link rel="stylesheet" href="style.css">
-    <title>Paredão da Baixinha | Recuperar</title>
+    <link rel="icon" href="../midias/logotipo-KLYVUNE.png" type="image/png">
+    <title>Recuperar senha | KLYVUNE</title>
 </head>
 
 <body>
-    <main class="container">
-        <header class="titulo">
-            <h1>Bem-vindo ao <br><img src="../midias/logoNome.png" alt="Paredão da Baixinha"></h1>
-            <p>Vamos enviar um código para seu E-mail</p>
+    <main class="recuperacao">
+        <header class="cabecalho">
+            <a href="../index.html" class="logo" aria-label="KLYVUNE, página inicial">KLYVUNE</a>
+            <h1>Esqueceu sua senha?</h1>
+            <p>Não se preocupe! Informe o e-mail associado à sua conta para iniciar a recuperação.</p>
         </header>
 
-        <form action="#" method="post">
-            <label for="email">Informe seu E-mail:</label>
-            <input type="email" name="email" id="email" placeholder="exemplo@gmail.com" autocomplete="email" required>
+        <form action="#" method="post" id="formRecuperacao">
+            <div class="campo">
+                <label for="email">E-mail da conta</label>
+                <input type="email" name="email" id="email" placeholder="seuemail@exemplo.com" autocomplete="email" required>
+            </div>
 
-            <button type="submit">Receber código</button>
+            <button type="submit" id="recuperar">Recuperar senha</button>
         </form>
 
-        <section class="cadastro">
-            <p>Já tem uma conta? <a href="../index.html">Fazer login</a></p>
-        </section>
+        <footer class="rodape">
+            <a href="../index.html">Voltar para o login</a>
+        </footer>
     </main>
 </body>
 

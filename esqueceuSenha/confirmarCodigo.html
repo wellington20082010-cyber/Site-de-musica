@@ -4,28 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../midias/logo.png" type="image/png">
+    <meta name="theme-color" content="#080510">
     <link rel="stylesheet" href="style.css">
-    <title>Paredão da Baixinha | Código</title>
+    <link rel="icon" href="../midias/logotipo-KLYVUNE.png" type="image/png">
+    <title>Verificar código | KLYVUNE</title>
 </head>
 
 <body>
-    <main class="container">
-        <header class="titulo">
-            <h1>Bem-vindo ao <br><img src="../midias/logoNome.png" alt="Paredão da Baixinha"></h1>
-            <p>Um código foi enviado para o e-mail: exemplo@gmail.com</p>
+    <main class="recuperacao">
+        <header class="cabecalho">
+            <a href="../index.html" class="logo" aria-label="KLYVUNE, página inicial">KLYVUNE</a>
+            <h1>Verifique seu e-mail</h1>
+            <p>Enviamos um código de verificação para o seu e-mail. Digite o código abaixo para continuar com a
+                recuperação da sua senha.</p>
         </header>
 
-        <form action="#" method="post">
-            <label for="email">Informe o código:</label>
-            <input type="text" name="codigo" id="codigo" placeholder="XXX-XXX" inputmode="numeric" maxlength="6" pattern="[0-9]{6}" autocomplete="one-time-code" required>
+        <form action="#" method="post" id="formCodigo">
+            <div class="campo">
+                <label for="codigo">Código de verificação</label>
+                <input type="text" name="codigo" id="codigo" placeholder="Digite os 6 dígitos" inputmode="numeric"
+                    autocomplete="one-time-code" pattern="[0-9]{6}" minlength="6" required autofocus>
+            </div>
 
-            <button type="submit">Confirmar código</button>
+            <button type="submit" id="verificar">Verificar código</button>
         </form>
 
-        <section class="cadastro">
-            <p>Já tem uma conta? <a href="../index.html">Fazer login</a></p>
-        </section>
+        <div class="reenviar">
+            <p>Não recebeu o código?</p>
+            <button type="button" id="reenviarCodigo">Reenviar código</button>
+        </div>
+
+        <footer class="rodape">
+            <a href="index.html">Voltar</a>
+        </footer>
     </main>
 </body>
 

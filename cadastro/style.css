@@ -1,13 +1,16 @@
 :root {
+    --fundo: #080510;
+    --roxo: #8b2cf5;
+    --roxoClaro: #b76aff;
     --branco: #ffffff;
-    --titulo: #a100d8;
-    --subtitulo: #666666;
-    --label: #333333;
-    --bordaInput: #dddddd;
-    --links: #8a2be2;
-    --preto: #000000;
+    --texto: #c4bfd0;
+    --fundoCartao: rgba(12, 8, 24, 0.90);
+    --borda: rgba(183, 106, 255, 0.25);
 }
 
+/*=================================================*/
+/*  CONFIGURAÇÕES GERAIS                           */
+/*=================================================*/
 * {
     margin: 0;
     padding: 0;
@@ -17,160 +20,209 @@
 
 body {
     min-height: 100vh;
-    min-height: 100dvh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 20px;
-    background-image: url("/midias/background-site.png");
+    justify-content: center;
+    padding: 24px;
+    color: var(--branco);
+
+    background-color: var(--fundo);
+    background-image: url("../midias/background-KLYVUNE.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-.container {
-    background: var(--branco);
+/*=================================================*/
+/*  CARTÃO DE CADASTRO                             */
+/*=================================================*/
+.cadastro {
     width: 100%;
-    max-width: 400px;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.titulo {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-header h1 {
-    color: var(--preto);
-    font-size: clamp(22px, 5vw, 26px);
-    margin-bottom: 10px;
-}
-
-header p {
-    color: var(--subtitulo);
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: var(--label);
-}
-
-input {
-    display: block;
-    width: 100%;
-    min-width: 0;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 2px solid var(--bordaInput);
+    max-width: 410px;
+    padding: 38px 32px;
+    background: var(--fundoCartao);
+    border: 1px solid var(--borda);
     border-radius: 18px;
-    font-size: 15px;
+    box-shadow: 0 0 35px rgba(112, 35, 230, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
-input:focus {
-    outline: 2px solid var(--titulo);
-    border-color: transparent;
+/*=================================================*/
+/*  CABEÇALHO                                      */
+/*=================================================*/
+.cabecalho {
+    text-align: center;
+    margin-bottom: 32px;
 }
 
-form p {
-    text-align: right;
-    margin-bottom: 20px;
-    font-size: 14px;
-}
-
-a {
-    color: var(--links);
+.logo {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: var(--roxoClaro);
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 5px;
     text-decoration: none;
 }
 
-a:hover {
+.cabecalho h1 {
+    margin-bottom: 12px;
+    font-size: 27px;
+    line-height: 1.3;
+}
+
+.cabecalho p {
+    color: var(--texto);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/*=================================================*/
+/*  CAMPOS DO FORMULÁRIO                           */
+/*=================================================*/
+#formCadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.campo input {
+    width: 100%;
+    height: 44px;
+    padding: 0 13px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    outline: none;
+    color: var(--branco);
+    font-size: 13px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo input::placeholder {
+    color: #888193;
+}
+
+.campo input:focus {
+    border-color: var(--roxoClaro);
+    box-shadow: 0 0 0 3px rgba(139, 44, 245, 0.15);
+}
+
+.campo input::-ms-reveal {
+    filter: invert(1);
+}
+
+/*=================================================*/
+/*  BOTÃO DE CADASTRO                              */
+/*=================================================*/
+#cadastrar {
+    width: 100%;
+    min-height: 45px;
+    margin-top: 5px;
+    background: linear-gradient(100deg, #7620dc, #a23df5);
+    border: none;
+    border-radius: 8px;
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#entrar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(139, 44, 245, 0.3);
+}
+
+#entrar:active {
+    transform: translateY(0);
+}
+
+#entar:focus-visible {
+    outline: 2px solid var(--branco);
+    outline-offset: 3px;
+}
+
+/*=================================================*/
+/*  RODAPÉ                                         */
+/*=================================================*/
+.rodape {
+    margin-top: 23px;
+    text-align: center;
+}
+
+.rodape p {
+    color: var(--texto);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.rodape a {
+    margin-left: 3px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.rodape a:hover {
+    color: var(--branco);
     text-decoration: underline;
 }
 
-button {
-    width: 100%;
-    min-height: 46px;
-    padding: 13px;
-    background: linear-gradient(90deg, #ff00cc, #7b2ff7);
-    ;
-    color: var(--branco);
-    border: none;
-    border-radius: 10px;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button:hover {
-    opacity: 0.85;
-}
-
-.cadastro {
-    text-align: center;
-    margin-top: 25px;
-    color: var(--subtitulo);
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-/* Ajustes para celulares */
+/*=================================================*/
+/*  RESPONSIVIDADE                                 */
+/*=================================================*/
 @media (max-width: 480px) {
-    .container {
-        width: 100%;
-        max-width: 400px;
-        padding: 28px 22px;
-    }
-
-    header h1 {
-        font-size: 24px;
-    }
-
-    header p {
-        font-size: 15px;
-    }
-
-    label {
-        font-size: 14px;
-    }
-
-    input {
-        font-size: 16px;
-        padding: 13px;
-    }
-
-    form p,
-    .cadastro {
-        font-size: 14px;
-    }
-
-    button {
-        min-height: 48px;
-    }
-}
-
-/* Ajustes para celulares muito pequenos */
-@media (max-width: 360px) {
     body {
-        padding: 10px;
+        padding: 16px;
+        background-attachment: scroll;
     }
 
-    .container {
-        padding: 20px 16px;
+    .cadastro {
+        max-width: 360px;
+        padding: 27px 22px;
+        border-radius: 14px;
     }
 
-    header h1 {
+    .logo {
+        margin-bottom: 20px;
+        font-size: 25px;
+        letter-spacing: 4px;
+    }
+
+    .cabecalho h1 {
         font-size: 22px;
     }
+
+    .cabecalho {
+        margin-bottom: 23px;
+    }
+
+    #formCadastro {
+        gap: 15px;
+    }
+
+    .campo input {
+        height: 44px;
+    }
 }
 
-/* Telas baixas */
-@media (max-height: 500px) {
+/* Telas com pouca altura */
+
+@media (max-height: 650px) {
     body {
         align-items: flex-start;
     }

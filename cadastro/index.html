@@ -2,42 +2,54 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../midias/logo.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
-  <title>Paredão da Baixinha | Cadastro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080510">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../midias/logotipo-KLYVUNE.png" type="image/png">
+    <title>Criar conta | KLYVUNE</title>
 </head>
 
 <body>
-  <main class="container">
-    <header class="titulo">
-      <h1>Bem-vindo ao <br><img src="../midias/logoNome.png" alt="Paredão da Baixinha"></h1>
-      <p>Vamos criar sua conta</p>
-    </header>
+    <main class="cadastro">
+        <header class="cabecalho">
+            <a href="../index.html" class="logo" aria-label="KLYVUNE, página inicial">KLYVUNE</a>
+            <h1>Crie sua conta</h1>
+            <p>Entre no ritmo e descubra novas músicas.</p>
+        </header>
 
-    <form action="#" method="post">
-      <label for="nome">Nome:</label>
-      <input type="text" name="nome" id="nome" placeholder="Nome de usuário" autocomplete="usernome" required>
+        <form action="#" method="post" id="formCadastro">
+            <div class="campo">
+                <label for="nome">Nome de usuário</label>
+                <input type="text" name="nome" placeholder="Como que ser chamado?" autocomplete="username" minlength="3"
+                    maxlength="30" required>
+            </div>
 
-      <label for="email">E-mail:</label>
-      <input type="email" name="email" id="email" placeholder="exemplo@gmail.com" autocomplete="email" required>
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="seuemail@exemplo.com" autocomplete="email"
+                    required>
+            </div>
 
-      <label for="senha">Senha:</label>
-      <input type="password" name="senha" id="senha" placeholder="Digite sua senha" autocomplete="current-password"
-        required>
+            <div class="campo">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="Crie sua senha" autocomplete="new-password"
+                    minlength="8" required>
+            </div>
 
-      <label for="senha">Confirmar senha:</label>
-      <input type="password" name="confirmarSenha" id="confirmarSenha" placeholder="Digite sua senha novamente"
-        autocomplete="current-password" required>
+            <div class="campo">
+                <label for="confirmarSenha">Confirmar senha</label>
+                <input type="password" name="confirmarSenha" id="confirmarSenha" placeholder="Digite a senha novamente"
+                    autocomplete="new-password" minlength="8" required>
+            </div>
 
-      <button type="submit">Criar</button>
-    </form>
+            <button type="submit" id="cadastrar">Criar conta</button>
+        </form>
 
-    <section class="cadastro">
-      <p>Já tem uma conta? <a href="../index.html">Fazer login</a></p>
-    </section>
-  </main>
+        <footer class="rodape">
+            <p>Já tem uma conta? <a href="../index.html">Entrar</a></p>
+        </footer>
+    </main>
 </body>
 
 </html>
